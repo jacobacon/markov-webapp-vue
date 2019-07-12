@@ -1,4 +1,4 @@
-# markov-webapp-vue
+# Vue Markov Chain Generator
 
 ## Project setup
 ```
