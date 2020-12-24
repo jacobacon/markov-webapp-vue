@@ -80,7 +80,9 @@ export default {
     train: function() {
       if (this.training !== null) {
         this.wordWeights = {};
-        this.wordArray = this.training.split(/(?=[ ,.!?\n])/);
+        this.wordArray = this.training
+          .split(/(?=[ ,.!?\n])/)
+          .map((item) => item.trim());
         this.wordArray.forEach((word, i) => {
           let nextWord = this.wordArray[++i] || "";
           if (!(word in this.wordWeights)) {
